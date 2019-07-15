@@ -7,4 +7,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'DataCollectFront';
+
+  private exibir: number = 1
+
+  private iniciar(): void {
+    if (this.exibir !== 0) {
+      this.exibir = 0
+    }
+  }
+
 }
