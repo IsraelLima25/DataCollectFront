@@ -1,18 +1,28 @@
 <div class="container">
   <div class="jumbotron esp" *ngIf="exibir===1;else importData">
-    <h1 class="display-4">Olá. Bem Vindo!!</h1>
-    <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to
-      featured
-      content or information.</p>
+    <h1 class="display-4">Olá Loucomotivado, Bem Vindo!!</h1>
+    <p class="lead"> Este é o portal no qual você irá enviar os dados dos figurinos que estão em sua posse. </p>
     <hr class="my-4">
-    <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-    <button class="btn btn-success btn-lg" (click)="iniciar()" role="button">Iniciar</button>
-  </div>
-  <ng-template #importData>
-    <div class="container esp">
-      <div class="row">
-        <app-import></app-import>
+    <p>Selecione seu usuário e insira sua chave de acesso para importar seus figurinos!</p>
+    <form>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="inputState">Usuário</label>
+          <select id="inputState" class="form-control">
+            <option selected>selecione</option>
+            <option>...</option>
+          </select>
+        </div>
+        <div class="form-group col-md-6">
+          <label for="inputPassword4">Chave Acesso</label>
+          <input type="password" class="form-control" id="inputPassword4">
+        </div>
       </div>
-    </div>
+      <button type="submit" class="btn btn-success">Entrar</button>
+    </form>
+  </div>
+
+  <ng-template #importData>
+    <app-import></app-import>
   </ng-template>
 </div>
